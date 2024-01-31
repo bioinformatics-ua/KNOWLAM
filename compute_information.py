@@ -39,7 +39,7 @@ def main(collection_file,
         estimator = HFNIEstimator(model_checkpoint, 
                                   cache_dir="hf_cache",
                                   model_kwargs={
-                                      "device_map": "auto",
+                                      "device_map": 0,
                                       **_dtype_option
                                   })
         
@@ -51,6 +51,7 @@ def main(collection_file,
             for out in estimator.information_from_generator(read_jsonl(collection_file),
                                                             context_percentage=context_percentage,
                                                             context_tokens=context_tokens):
+                #print(out)
                 f.write(f"{json.dumps(out)}\n")
 
 if __name__=="__main__":
