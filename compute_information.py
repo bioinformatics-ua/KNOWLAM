@@ -21,9 +21,9 @@ def main(collection_file,
          dtype):
 
         
-        if _dtype_option=="int8":
+        if dtype=="int8":
             _dtype_option = {"load_in_8bit": True}
-        elif _dtype_option=="int4":
+        elif dtype=="int4":
             _dtype_option = {"load_in_4bit": True}
         else:
             _dtype_option = {"torch_dtype": MAP[dtype]}
