@@ -1,6 +1,12 @@
 from synqgen.ni import HFNIEstimator
 import click
 import json
+import torch
+
+
+MAP = {"float32": torch.float32,
+       "float16": torch.float16,
+       "bfloat16": torch.bfloat16}
 
 @click.command()
 @click.argument("collection_file")
