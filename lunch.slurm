@@ -17,11 +17,11 @@ module load cuda
 #python benchmark_sparse_retrieval_from_splade.py beir_datasets/msmarco 1000 --algorithm iterative --objective half
 #done
 
-python compute_information.py clean_datasets/politics__speeches_clean.jsonl EleutherAI/gpt-neo-125m --context-percentage 0.25 --dtype float32
-python compute_information.py clean_datasets/politics__speeches_clean.jsonl EleutherAI/gpt-neo-125m --context-percentage 0.25 --dtype float16
-python compute_information.py clean_datasets/politics__speeches_clean.jsonl EleutherAI/gpt-neo-125m --context-percentage 0.25 --dtype bfloat16
-python compute_information.py clean_datasets/politics__speeches_clean.jsonl EleutherAI/gpt-neo-125m --context-percentage 0.25 --dtype int8
-python compute_information.py clean_datasets/politics__speeches_clean.jsonl EleutherAI/gpt-neo-125m --context-percentage 0.25 --dtype int4
+python compute_information.py clean_datasets/math__openai_grade_school_clean.jsonl EleutherAI/gpt-neo-125m --context-percentage 0.25 --dtype float32
+python compute_information.py clean_datasets/math__openai_grade_school_clean.jsonl EleutherAI/gpt-neo-125m --context-percentage 0.25 --dtype float16
+python compute_information.py clean_datasets/math__openai_grade_school_clean.jsonl EleutherAI/gpt-neo-125m --context-percentage 0.25 --dtype bfloat16
+python compute_information.py clean_datasets/math__openai_grade_school_clean.jsonl EleutherAI/gpt-neo-125m --context-percentage 0.25 --dtype int8
+python compute_information.py clean_datasets/math__openai_grade_school_clean.jsonl EleutherAI/gpt-neo-125m --context-percentage 0.25 --dtype int4
 
 
 deactivate    
