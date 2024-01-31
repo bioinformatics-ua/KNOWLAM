@@ -45,11 +45,11 @@ def main(collection_file,
         _dataset_name = collection_file[:-12].replace("/","_")
         _out_name = f"{_model_name}_{_dataset_name}_P{context_percentage}_{dtype}.jsonl"
         
-        with open(_out_name, "w") as f:
+        with open(f"results/{_out_name}", "w") as f:
             for out in estimator.information_from_generator(read_jsonl(collection_file),
                                                             context_percentage=context_percentage,
                                                             context_tokens=context_tokens):
-                f.write(f"results/{json.dumps(out)}\n")
+                f.write(f"{json.dumps(out)}\n")
 
 if __name__=="__main__":
     main()  
