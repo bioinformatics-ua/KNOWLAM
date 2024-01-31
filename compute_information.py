@@ -20,7 +20,7 @@ def main(collection_file,
          context_tokens,
          dtype):
 
-        _dtype_option = {"torch_dtype": dtype}
+        _dtype_option = {"torch_dtype": MAP[dtype]}
         if _dtype_option=="int8":
             _dtype_option = {"load_in_8bit": True}
         elif _dtype_option=="int4":
