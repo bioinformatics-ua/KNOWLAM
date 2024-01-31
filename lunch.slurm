@@ -1,4 +1,10 @@
 #!/bin/bash
+#SBATCH --job-name=compute-information                 # create a short name for your job
+#SBATCH --output="compute-information-%j.out"
+#SBATCH --partition=gpu
+#SBATCH --qos=gpu085862023
+#SBATCH --gres=gpu
+
 
 source venv/bin/activate
 module load cuda
