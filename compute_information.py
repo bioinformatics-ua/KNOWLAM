@@ -30,7 +30,7 @@ def main(collection_file,
             for out in estimator.information_from_generator(read_jsonl(collection_file),
                                                             context_percentage=context_percentage,
                                                             context_tokens=context_tokens):
-                f.write(f"{json.dumps(out)}\n")
+                f.write(f"results/{json.dumps(out)}\n")
 
 if __name__=="__main__":
     main()  
