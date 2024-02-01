@@ -50,7 +50,9 @@ def main(collection_file,
         with open(f"results/{_out_name}", "w") as f:
             for out in estimator.information_from_generator(read_jsonl(collection_file),
                                                             context_percentage=context_percentage,
-                                                            context_tokens=context_tokens):
+                                                            context_tokens=context_tokens,
+                                                            max_samples=10_000,
+                                                            max_documents=10_000):
                 #print(out)
                 f.write(f"{json.dumps(out)}\n")
 
